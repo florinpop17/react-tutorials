@@ -9,6 +9,10 @@ body {
     text-align: center;
 }
 
+#react-container span {
+    color: #fff;
+}
+
 input, textarea {
     border: 0;
     border-bottom: 2px solid #333;
