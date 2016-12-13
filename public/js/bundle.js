@@ -21523,7 +21523,7 @@
 	            'div',
 	            null,
 	            React.createElement(
-	                'h3',
+	                'h2',
 	                null,
 	                'Hello ',
 	                name,
