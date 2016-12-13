@@ -1,10 +1,20 @@
 module.exports = {
-    entry: './public/js/app.js',
+    entry: './public/js/app.jsx',
     output: {
         path: __dirname,
         filename: './public/js/bundle.js'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
+    },
+    module: {
+        loaders: [
+            {
+                loader: 'babel-loader',
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            }
+        ]
     }
 };
