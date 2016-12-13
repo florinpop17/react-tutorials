@@ -48,39 +48,7 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
-	var GreeterMessage = __webpack_require__(183);
-	var GreeterForm = __webpack_require__(184);
-
-	var Greeter = React.createClass({
-	    displayName: 'Greeter',
-
-	    getDefaultProps: function getDefaultProps() {
-	        return {
-	            name: 'React',
-	            message: 'This is the default message!'
-	        };
-	    },
-	    getInitialState: function getInitialState() {
-	        return {
-	            name: this.props.name,
-	            message: this.props.message
-	        };
-	    },
-	    handleNewData: function handleNewData(updates) {
-	        this.setState(updates);
-	    },
-	    render: function render() {
-	        var name = this.state.name;
-	        var message = this.state.message;
-
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(GreeterMessage, { name: name, message: message }),
-	            React.createElement(GreeterForm, { onNewData: this.handleNewData })
-	        );
-	    }
-	});
+	var Greeter = __webpack_require__(183);
 
 	var myName = "Florin";
 
@@ -21784,6 +21752,49 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var GreeterMessage = __webpack_require__(184);
+	var GreeterForm = __webpack_require__(185);
+
+	var Greeter = React.createClass({
+	    displayName: 'Greeter',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            name: 'React',
+	            message: 'This is the default message!'
+	        };
+	    },
+	    getInitialState: function getInitialState() {
+	        return {
+	            name: this.props.name,
+	            message: this.props.message
+	        };
+	    },
+	    handleNewData: function handleNewData(updates) {
+	        this.setState(updates);
+	    },
+	    render: function render() {
+	        var name = this.state.name;
+	        var message = this.state.message;
+
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(GreeterMessage, { name: name, message: message }),
+	            React.createElement(GreeterForm, { onNewData: this.handleNewData })
+	        );
+	    }
+	});
+
+	module.exports = Greeter;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
 
 	var GreeterMessage = React.createClass({
 	    displayName: 'GreeterMessage',
@@ -21796,7 +21807,7 @@
 	            'div',
 	            null,
 	            React.createElement(
-	                'h1',
+	                'h3',
 	                null,
 	                'Hello ',
 	                name
@@ -21813,57 +21824,38 @@
 	module.exports = GreeterMessage;
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(1);
 
 	var GreeterForm = React.createClass({
-	    displayName: 'GreeterForm',
+	    displayName: "GreeterForm",
 
-	    onFormSubmit: function onFormSubmit(e) {
-	        e.preventDefault();
-
+	    changeInput: function changeInput() {
 	        var updates = {};
 	        var name = this.refs.name.value;
 	        var message = this.refs.message.value;
 
-	        if (name.length > 0) {
-	            this.refs.name.value = '';
-	            updates.name = name;
-	        }
-
-	        if (message.length > 0) {
-	            this.refs.message.value = '';
-	            updates.message = message;
-	        }
+	        updates = { name: name, message: message };
 
 	        this.props.onNewData(updates);
 	    },
 	    render: function render() {
 	        return React.createElement(
-	            'form',
-	            { onSubmit: this.onFormSubmit },
+	            "form",
+	            null,
 	            React.createElement(
-	                'div',
+	                "div",
 	                null,
-	                React.createElement('input', { type: 'text', ref: 'name', placeholder: 'Enter name' })
+	                React.createElement("input", { onChange: this.changeInput, type: "text", ref: "name", placeholder: "Enter name" })
 	            ),
 	            React.createElement(
-	                'div',
+	                "div",
 	                null,
-	                React.createElement('textarea', { ref: 'message', placeholder: 'Enter message' })
-	            ),
-	            React.createElement(
-	                'div',
-	                null,
-	                React.createElement(
-	                    'button',
-	                    null,
-	                    'Submit'
-	                )
+	                React.createElement("textarea", { onChange: this.changeInput, ref: "message", placeholder: "Enter message" })
 	            )
 	        );
 	    }

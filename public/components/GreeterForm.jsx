@@ -1,36 +1,24 @@
 var React = require('react');
 
 var GreeterForm = React.createClass({
-    onFormSubmit: function (e) {
-        e.preventDefault();
-        
+    changeInput: function (){
         var updates = {};
         var name = this.refs.name.value;
         var message = this.refs.message.value;
         
-        if(name.length > 0) {
-            this.refs.name.value = '';
-            updates.name = name;
-        }
-        
-        if(message.length > 0) {
-            this.refs.message.value = '';
-            updates.message = message;
-        }
+        updates = {name, message};
         
         this.props.onNewData(updates);
+        
     },
     render: function() {
         return (
-            <form onSubmit={this.onFormSubmit}>
+            <form>
                 <div>
-                    <input type="text" ref="name" placeholder="Enter name"/>
+                    <input onChange={this.changeInput} type="text" ref="name" placeholder="Enter name"/>
                 </div>
                 <div>
-                    <textarea ref="message" placeholder="Enter message"></textarea>
-                </div>
-                <div>
-                    <button>Submit</button>
+                    <textarea onChange={this.changeInput} ref="message" placeholder="Enter message"></textarea>
                 </div>
             </form>
         );
