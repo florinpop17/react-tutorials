@@ -1,0 +1,23 @@
+body {
+    background-color: lightskyblue;
+    color: #111;
+    font-family: Roboto, sans-serif;
+}
+
+#react-container {
+    margin-top: 12%;
+    text-align: center;
+}
+
+input, textarea {
+    border: 0;
+    border-bottom: 2px solid #333;
+    background-color: transparent;
+    padding: 10px;
+    width: 200px;
+    max-width: 200px;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+}
