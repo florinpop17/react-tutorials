@@ -1,4 +1,4 @@
-var MyComponent = React.createClass({
+var Container = React.createClass({
     render : function () {
         return (
             <div>
@@ -8,4 +8,4 @@ var MyComponent = React.createClass({
     }
 });
 
-ReactDOM.render(<MyComponent />, document.getElementById("react-container"));
+ReactDOM.render(<Container />, document.getElementById("react-container"));
