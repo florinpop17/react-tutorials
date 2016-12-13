@@ -48,7 +48,7 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
-	var GreeterForm = __webpack_require__(183);
+	var Greeter = __webpack_require__(183);
 	var GreeterMessage = __webpack_require__(184);
 	var GreeterForm = __webpack_require__(185);
 
