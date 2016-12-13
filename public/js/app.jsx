@@ -1,15 +1,17 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var GreeterMessage = require('../components/GreeterMessage');
+var GreeterForm = require('../components/GreeterForm');
 
-var Container = React.createClass({
+var Greeter = React.createClass({
     render : function () {
         return (
             <div>
-                <p>Simple react component</p>
+                <GreeterMessage />
+                <GreeterForm />
             </div>
         );
     }
 });
 
-ReactDOM.render(<Container />, document.getElementById("react-container"));
+ReactDOM.render(<Greeter />, document.getElementById("react-container"));
