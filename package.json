@@ -1,0 +1,28 @@
+{
+  "name": "react-tutorials",
+  "version": "0.0.1",
+  "description": "Learning react",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flopet17/react-tutorials.git"
+  },
+  "keywords": [
+    "reactjs",
+    "nodejs",
+    "html",
+    "javascript"
+  ],
+  "author": "Florin Pop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Flopet17/react-tutorials/issues"
+  },
+  "homepage": "https://github.com/Flopet17/react-tutorials#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
