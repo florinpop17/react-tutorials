@@ -48,39 +48,9 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
-	var GreeterMessage = __webpack_require__(183);
-	var GreeterForm = __webpack_require__(184);
-
-	var Greeter = React.createClass({
-	    displayName: 'Greeter',
-
-	    getDefaultProps: function getDefaultProps() {
-	        return {
-	            name: 'React',
-	            message: 'This is the default message!'
-	        };
-	    },
-	    getInitialState: function getInitialState() {
-	        return {
-	            name: this.props.name,
-	            message: this.props.message
-	        };
-	    },
-	    handleNewData: function handleNewData(updates) {
-	        this.setState(updates);
-	    },
-	    render: function render() {
-	        var name = this.state.name;
-	        var message = this.state.message;
-
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(GreeterMessage, { name: name, message: message }),
-	            React.createElement(GreeterForm, { onNewData: this.handleNewData })
-	        );
-	    }
-	});
+	var GreeterForm = __webpack_require__(183);
+	var GreeterMessage = __webpack_require__(184);
+	var GreeterForm = __webpack_require__(185);
 
 	var myName = "Florin";
 
@@ -21785,6 +21755,47 @@
 
 	var React = __webpack_require__(1);
 
+	var Greeter = React.createClass({
+	    displayName: 'Greeter',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            name: 'React',
+	            message: 'This is the default message!'
+	        };
+	    },
+	    getInitialState: function getInitialState() {
+	        return {
+	            name: this.props.name,
+	            message: this.props.message
+	        };
+	    },
+	    handleNewData: function handleNewData(updates) {
+	        this.setState(updates);
+	    },
+	    render: function render() {
+	        var name = this.state.name;
+	        var message = this.state.message;
+
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(GreeterMessage, { name: name, message: message }),
+	            React.createElement(GreeterForm, { onNewData: this.handleNewData })
+	        );
+	    }
+	});
+
+	module.exports = Greeter;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
 	var GreeterMessage = React.createClass({
 	    displayName: 'GreeterMessage',
 
@@ -21813,7 +21824,7 @@
 	module.exports = GreeterMessage;
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
