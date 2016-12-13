@@ -21815,6 +21815,7 @@
 	            React.createElement(
 	                'p',
 	                null,
+	                'Message: ',
 	                message
 	            )
 	        );
