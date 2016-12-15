@@ -21571,12 +21571,24 @@
 	            null,
 	            React.createElement(
 	                "div",
-	                null,
+	                { "class": "container" },
+	                React.createElement(
+	                    "label",
+	                    null,
+	                    "Name:"
+	                ),
+	                React.createElement("br", null),
 	                React.createElement("input", { onChange: this.changeInput, type: "text", ref: "name", placeholder: "Enter name" })
 	            ),
 	            React.createElement(
 	                "div",
 	                null,
+	                React.createElement(
+	                    "label",
+	                    null,
+	                    "Message:"
+	                ),
+	                React.createElement("br", null),
 	                React.createElement("textarea", { onChange: this.changeInput, ref: "message", placeholder: "Enter message" })
 	            )
 	        );

@@ -14,10 +14,12 @@ var GreeterForm = React.createClass({
     render: function() {
         return (
             <form>
-                <div>
+                <div class="container">
+                    <label>Name:</label><br />
                     <input onChange={this.changeInput} type="text" ref="name" placeholder="Enter name"/>
                 </div>
                 <div>
+                    <label>Message:</label><br />
                     <textarea onChange={this.changeInput} ref="message" placeholder="Enter message"></textarea>
                 </div>
             </form>
