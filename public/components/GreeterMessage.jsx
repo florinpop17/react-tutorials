@@ -6,7 +6,7 @@ var GreeterMessage = React.createClass({
        var message = this.props.message;
        
        return (
-           <div>
+           <div id="message">
                <h2>Hello {name}!</h2>
                <p>Your message: <span>{message}</span></p>
            </div>
