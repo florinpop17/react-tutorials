@@ -13,15 +13,19 @@ body {
     color: #fff;
 }
 
+form {
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
 input, textarea {
     border: 0;
-    border-bottom: 2px solid #333;
+    border: 2px solid #333;
     background-color: transparent;
     padding: 10px;
-    width: 200px;
-    max-width: 200px;
+    width: 100%;
     font-size: 14px;
     font-family: Roboto, sans-serif;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
-    margin-bottom: 10px;
+    margin: 7px 0 15px;
 }
