@@ -14,9 +14,16 @@ body {
 }
 
 form {
-    width: 400px;
+    width: 30%;
     margin: 0 auto;
     text-align: left;
+    float: left;
+}
+
+#message {
+    float: left;
+    margin-left: 20%;
+    width: 30%;
 }
 
 input, textarea {
