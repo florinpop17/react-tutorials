@@ -21571,7 +21571,7 @@
 	            null,
 	            React.createElement(
 	                "div",
-	                { "class": "container" },
+	                { className: "container" },
 	                React.createElement(
 	                    "label",
 	                    null,

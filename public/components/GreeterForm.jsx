@@ -14,7 +14,7 @@ var GreeterForm = React.createClass({
     render: function() {
         return (
             <form>
-                <div class="container">
+                <div className="container">
                     <label>Name:</label><br />
                     <input onChange={this.changeInput} type="text" ref="name" placeholder="Enter name"/>
                 </div>
